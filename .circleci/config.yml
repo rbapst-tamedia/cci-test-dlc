@@ -12,7 +12,8 @@ jobs:
           name: build
           command: |
             cd node
-            docker buildx build -f Dockerfile --name cci-test-dlc-test .
+            docker buildx create --name cci-test-dlc-test
+            docker buildx build -f Dockerfile .
 
 workflow:
   b1:

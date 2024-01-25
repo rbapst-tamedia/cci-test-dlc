@@ -1,0 +1,20 @@
+version: 2.1
+
+jobs:
+  build:
+    docker:
+      - image: cimg/base:2023.04
+    steps:
+      - checkout
+      - setup_remote_docker:
+          docker_layer_caching: true
+      - run:
+          name: build
+          command: |
+            cd node
+            docker buildx build -f Dockerfile
+
+workflow:
+  b1:
+    jobs:
+      - build

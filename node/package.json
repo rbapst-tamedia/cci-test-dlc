@@ -1,0 +1,12 @@
+{
+  "name": "hello",
+  "version": "0.1.0",
+  "description": "Hello World nodejs server",
+  "main": "src/myapp.js",
+  "scripts": {
+    "start": "NODE_ENV=production node ./src/myapp.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

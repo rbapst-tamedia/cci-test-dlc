@@ -11,6 +11,7 @@ RUN npm install
 COPY src/ src/
 
 ENV NODE_ENV=production
+ENV DUMMY=dummy
 CMD ["node", "src/myapp.js"]
 
 EXPOSE 3000
